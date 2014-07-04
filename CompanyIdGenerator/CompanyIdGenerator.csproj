@@ -68,13 +68,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="finCompanyCode.cs" />
-    <Compile Include="finTaxCode.cs" />
-    <Compile Include="Multiplicate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomNumber.cs" />
-    <Compile Include="sweCompanyCode.cs" />
-    <Compile Include="sweTaxCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

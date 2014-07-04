@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace CompanyIdGenerator
+namespace FieldsGenerator.Logic
 {
     public static class FinCompanyCode
     {

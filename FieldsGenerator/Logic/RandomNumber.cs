@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Globalization;
 
-namespace CompanyIdGenerator
+namespace FieldsGenerator.Logic
 {
     public static class RandomNumber
     {

@@ -1,4 +1,4 @@
-﻿namespace CompanyIdGenerator
+namespace FieldsGenerator.Logic
 {
     public static class SweTaxCode
     {
