@@ -2,3 +2,5 @@
 
 app.controller 'CalculationController', ($scope) ->
     $scope.phones = ['1', '2', '3']
+	$scope.number = ""
+		
