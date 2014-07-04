@@ -18,10 +18,8 @@ namespace FieldsGenerator
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                        "~/Scripts/angular.js",
-                        "~/Scripts/angular-route.js",
-                        "~/Scripts/angular-animate.js"
+            bundles.Add(new Bundle("~/bundles/angular").Include(
+                        "~/Scripts/angular.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include("~/Scripts/App/app.js"));
