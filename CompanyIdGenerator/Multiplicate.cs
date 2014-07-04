@@ -14,7 +14,7 @@ namespace CompanyIdGenerator
             }
             var arr = result.ToString(CultureInfo.InvariantCulture).ToCharArray();
             result = (int) Char.GetNumericValue(arr[0]) +
-                     (int) Char.GetNumericValue(arr[1]);
+                     (int) Char.GetNumericValue(arr[1]); 
             return result;
         }
     }
