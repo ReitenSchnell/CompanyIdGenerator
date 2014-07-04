@@ -4,7 +4,7 @@
     {
         public static string Generate()
         {
-            return "FI" + RandomNumber.GetNumber(8, 1, 9);
+            return "FI" + RandomNumber.GetNumber(8, 1, 9); 
         }
     }
 }
