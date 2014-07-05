@@ -18,10 +18,12 @@ namespace FieldsGenerator.Api
                 {"Finnish Tax Number", FinTaxCode.Generate},
             };
 
-        public string Get(string id)
+        public HttpResponseMessage Get(string id)
         {
-            var s = map.ContainsKey(id) ? map[id]() : string.Empty;
-            return s;
+            return new HttpResponseMessage
+                {
+                    Content = new StringContent(map.ContainsKey(id) ? map[id]() : string.Empty)
+                };
         }
     }
 }
