@@ -14,7 +14,7 @@
                     <form class="form-horizontal">
                         <div class="row">
                             <div class="col-lg-9">
-                                <select class="form-control" id="select">
+                                <select class="form-control" id="select" ng-model="numberType" ng-click="generate()">
                                     <option>Swedish Company Id</option>
                                     <option>Swedish Tax Number</option>
                                     <option>Finnish Company Id</option>
@@ -22,12 +22,12 @@
                                 </select>
                             </div>
                             <div class="col-lg-2">
-                                <button class="btn btn-primary">Generate</button>
+                                <button class="btn btn-primary" ng-click="generate()">Generate</button>
                             </div>
                         </div>
                         <div class="row" style="margin-top: 15px">
                             <div class="col-lg-11 text-success">
-                                "Well done"
+                                {{generatedId}}
                             </div>
                         </div>
                     </form>
@@ -35,8 +35,5 @@
             </div>
         </div>
     </div>
-    <ul>
-                            <li ng-repeat ="phone in phones">{{phone}}</li>
-                        </ul>
 </div>
 
