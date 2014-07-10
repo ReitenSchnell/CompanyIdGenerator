@@ -134,10 +134,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Logic\finCompanyCode.cs" />
+    <Compile Include="Logic\finPersonalCode.cs" />
     <Compile Include="Logic\finTaxCode.cs" />
     <Compile Include="Logic\Multiplicate.cs" />
+    <Compile Include="Logic\NumeralSystem.cs" />
+    <Compile Include="Logic\RandomDate.cs" />
     <Compile Include="Logic\RandomNumber.cs" />
     <Compile Include="Logic\sweCompanyCode.cs" />
+    <Compile Include="Logic\swePersonalCode.cs" />
     <Compile Include="Logic\sweTaxCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

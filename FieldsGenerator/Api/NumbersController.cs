@@ -14,8 +14,10 @@ namespace FieldsGenerator.Api
             {
                 {"Swedish Company Id", SweCompanyCode.Generate},
                 {"Swedish Tax Number", SweTaxCode.Generate},
+                {"Swedish Personal Number", SwePersonalCode.Generate},
                 {"Finnish Company Id", FinCompanyCode.Generate},
                 {"Finnish Tax Number", FinTaxCode.Generate},
+                {"Finnish Personal Number", FinPersonalCode.Generate},
             };
 
         public HttpResponseMessage Get(string id)
