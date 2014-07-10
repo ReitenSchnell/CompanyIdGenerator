@@ -9,7 +9,7 @@ namespace FieldsGenerator.Logic
         {
             var code = RandomNumber.GetNumber(7, 1, 9);
             var arr = code.ToCharArray();
-            //7   9   10   5    8     4    2
+
             _checksum = (int) Char.GetNumericValue(arr[0])*7 +
                         (int) Char.GetNumericValue(arr[1])*9 +
                         (int) Char.GetNumericValue(arr[2])*10 +
