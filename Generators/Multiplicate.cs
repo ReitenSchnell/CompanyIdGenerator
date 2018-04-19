@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 
 namespace Generators
@@ -7,7 +6,7 @@ namespace Generators
     {
         public static int Exec(char a, int b)
         {
-            var result = (int)Char.GetNumericValue(a) * b;
+            var result = (int)char.GetNumericValue(a) * b;
             if (result <= 9)
             {
                 return result;
