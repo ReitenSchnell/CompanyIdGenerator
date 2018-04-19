@@ -1,11 +1,10 @@
-using System;
 using System.Globalization;
 
 namespace Generators
 {
     public static class SweCompanyCode
     {
-        private static string _checksum;
+        private static string checksum;
         public static string Generate()
         {
             var number = RandomNumber.GetNumber(2, 1, 9) +
@@ -14,7 +13,7 @@ namespace Generators
                          "-" +
                          RandomNumber.GetNumber(3, 1, 9);
             var arr = number.ToCharArray();
-            var checksum = Multiplicate.Exec(arr[0], 2) +
+            var localCheckSum = Multiplicate.Exec(arr[0], 2) +
                            Multiplicate.Exec(arr[1], 1) +
                            Multiplicate.Exec(arr[2], 2) +
                            Multiplicate.Exec(arr[3], 1) +
@@ -23,18 +22,18 @@ namespace Generators
                            Multiplicate.Exec(arr[7], 2) +
                            Multiplicate.Exec(arr[8], 1) +
                            Multiplicate.Exec(arr[9], 2);
-            var s = checksum.ToString(CultureInfo.InvariantCulture).ToCharArray();
-            var sum = 10 - (int)Char.GetNumericValue(s[1]);
+            var s = localCheckSum.ToString(CultureInfo.InvariantCulture).ToCharArray();
+            var sum = 10 - (int)char.GetNumericValue(s[1]);
             switch (sum)
             {
                 case 10:
-                    _checksum = 0.ToString(CultureInfo.InvariantCulture);
+                    checksum = 0.ToString(CultureInfo.InvariantCulture);
                     break;
                 default:
-                    _checksum = sum.ToString(CultureInfo.InvariantCulture);
+                    checksum = sum.ToString(CultureInfo.InvariantCulture);
                     break;
             }
-            return  number+_checksum;
+            return  number+checksum;
         }
     }
 }

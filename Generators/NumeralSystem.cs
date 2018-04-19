@@ -26,7 +26,7 @@ namespace Generators
                 currentNumber = currentNumber / radix;
             }
 
-            var result = new String(charArray, index + 1, bitsInLong - index - 1);
+            var result = new string(charArray, index + 1, bitsInLong - index - 1);
             if (decimalNumber < 0)
             {
                 result = "-" + result;

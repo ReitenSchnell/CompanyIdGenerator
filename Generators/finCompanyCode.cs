@@ -1,32 +1,30 @@
-using System;
-
 namespace Generators
 {
     public static class FinCompanyCode
     {
-        private static int _checksum;
+        private static int checksum;
         public static string Generate()
         {
             var code = RandomNumber.GetNumber(7, 1, 9);
             var arr = code.ToCharArray();
 
-            _checksum = (int) Char.GetNumericValue(arr[0])*7 +
-                        (int) Char.GetNumericValue(arr[1])*9 +
-                        (int) Char.GetNumericValue(arr[2])*10 +
-                        (int) Char.GetNumericValue(arr[3])*5 +
-                        (int) Char.GetNumericValue(arr[4])*8 +
-                        (int) Char.GetNumericValue(arr[5])*4 +
-                        (int) Char.GetNumericValue(arr[6])*2;
-            _checksum = _checksum%11;
-            switch (_checksum)
+            checksum = (int) char.GetNumericValue(arr[0])*7 +
+                        (int) char.GetNumericValue(arr[1])*9 +
+                        (int) char.GetNumericValue(arr[2])*10 +
+                        (int) char.GetNumericValue(arr[3])*5 +
+                        (int) char.GetNumericValue(arr[4])*8 +
+                        (int) char.GetNumericValue(arr[5])*4 +
+                        (int) char.GetNumericValue(arr[6])*2;
+            checksum = checksum%11;
+            switch (checksum)
             {
                 case 0:
-                    return code + "-" + _checksum;
+                    return code + "-" + checksum;
                 case 1:
-                    _checksum = 0;
-                    return code + "-" + _checksum;
+                    checksum = 0;
+                    return code + "-" + checksum;
                 default:
-                    return code + "-" + (11-_checksum);
+                    return code + "-" + (11-checksum);
             }
         }
     }

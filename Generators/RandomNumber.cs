@@ -5,21 +5,21 @@ namespace Generators
 {
     public static class RandomNumber
     {
-        private static readonly Random RandNum = new Random();
-        private static string _number;
+        private static readonly Random randNum = new Random();
+        private static string number;
 
         public static string GetNumber(int lenth, int lower, int upper)
         {
-            _number = string.Empty;
+            number = string.Empty;
             for (var i = 0; i < lenth; i++)
             {
-                _number = _number + GenNumber(lower, upper);
+                number = number + GenNumber(lower, upper);
             }
-            return _number;
+            return number;
         }
         private static string GenNumber(int lower, int upper)
         {
-            return RandNum.Next(lower, upper).ToString(CultureInfo.InvariantCulture);
+            return randNum.Next(lower, upper).ToString(CultureInfo.InvariantCulture);
         }
 
     }
