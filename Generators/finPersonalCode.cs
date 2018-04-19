@@ -1,37 +1,31 @@
-﻿namespace Generators
+﻿using System;
+
+namespace Generators
 {
     public class FinPersonalCode
     {
-        private static int checksum;
         private static string separator;
+        private const string checkStr = "0123456789ABCDEFHJKLMNPRSTUVWXY";
         public static string Generate()
         {
             var date = RandomDate.GetDate();
+            var dateStr = date.ToString("ddMMyy");
+            var randomStr = RandomNumber.GetNumber(3, 1, 9);
+            var checksum = int.Parse(dateStr + randomStr) % 31;
+            return dateStr + GetSeparator(date) + randomStr + checkStr[checksum];
+        }
+
+        private static string GetSeparator(DateTime date)
+        {
             if (date.Year < 1900)
             {
-                separator = "+";
+                return "+";
             }
-            else if (date.Year >= 1900 && date.Year < 2000)
+            if (date.Year >= 1900 && date.Year < 2000)
             {
-                separator = "-";
+                return "-";
             }
-            else if (date.Year >= 2000)
-            {
-                separator = "A";
-            }
-            var number = date.ToString("ddMMyy") + separator + RandomNumber.GetNumber(3, 1, 9);
-            var arr = number.ToCharArray();
-            checksum = (int)char.GetNumericValue(arr[0]) +
-                        (int)char.GetNumericValue(arr[1]) +
-                        (int)char.GetNumericValue(arr[2]) +
-                        (int)char.GetNumericValue(arr[3]) +
-                        (int)char.GetNumericValue(arr[4]) +
-                        (int)char.GetNumericValue(arr[5]) +
-                        (int)char.GetNumericValue(arr[7]) +
-                        (int)char.GetNumericValue(arr[8]) +
-                        (int)char.GetNumericValue(arr[9]) ;
-            checksum = checksum % 31;
-            return number+NumeralSystem.DecimalToArbitrarySystem(checksum, 31);
+            return "A";
         }
     }
 }
