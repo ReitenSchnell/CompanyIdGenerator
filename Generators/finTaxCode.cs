@@ -1,4 +1,4 @@
-namespace FieldsGenerator.Logic
+namespace Generators
 {
     public static class FinTaxCode
     {

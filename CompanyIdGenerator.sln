@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CD53431-9627-4C1A-8B67-E75044E2C5F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldsGenerator", "FieldsGenerator\FieldsGenerator.csproj", "{C6FA9CD8-49C0-46F5-AAB5-14C4875D175B}"
@@ -12,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2B8DFC
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generators", "Generators\Generators.csproj", "{160ABDFC-4383-4430-8077-D24F722C0AF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,8 +26,15 @@ Global
 		{C6FA9CD8-49C0-46F5-AAB5-14C4875D175B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6FA9CD8-49C0-46F5-AAB5-14C4875D175B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6FA9CD8-49C0-46F5-AAB5-14C4875D175B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160ABDFC-4383-4430-8077-D24F722C0AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160ABDFC-4383-4430-8077-D24F722C0AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160ABDFC-4383-4430-8077-D24F722C0AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160ABDFC-4383-4430-8077-D24F722C0AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC78B732-73F7-47FB-B41C-1D49F1A1F653}
 	EndGlobalSection
 EndGlobal

@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace FieldsGenerator.Logic
+namespace Generators
 {
     public static class Multiplicate
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace FieldsGenerator.Logic
+namespace Generators
 {
     public static class FinCompanyCode
     {
